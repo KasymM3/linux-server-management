@@ -14,7 +14,7 @@ USAGE=$(df -P / | awk 'NR==2 {gsub("%", "", $5); print $5}')
 echo "Current disk usage: ${USAGE}%"
 echo "Warning threshold: ${THRESHOLD}%"
 
-if (( USAGE >= THRESHOLD )); then
+if (( USAGE <= THRESHOLD )); then
     echo "WARNING: disk usage is above the configured threshold."
     exit 1
 fi
