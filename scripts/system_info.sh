@@ -32,3 +32,6 @@ free -h
 echo
 echo "Disk usage:"
 df -h /
+
+echo
+echo "System information collection completed."
